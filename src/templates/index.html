@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Compression</title>
+    <link rel="stylesheet" href="/static/UAS.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Image Compression</h1>
+        <div class="input-section">
+            <label for="file-upload" class="custom-file-upload">
+                Choose File
+            </label>
+            <input id="file-upload" type="file"/>
+            <label for="compression-rate">Image Compression Rate:</label>
+            <input type="number" id="compression-rate" name="compression-rate" min="0" max="100" placeholder="Enter rate"/> %
+        </div>
+        <div class="images">
+            <div class="image-container">
+                <p>Before</p>
+                <div class="image-placeholder" id="before-image"></div>
+            </div>
+            <div class="image-container">
+                <p>After</p>
+                <div class="image-placeholder" id="after-image"></div>
+            </div>
+        </div>
+        <div class="info">
+            <p>Image pixel difference percentage: <span id="pixel-difference">0</span> %</p>
+            <p>Image compression time: <span id="compression-time">0</span> seconds</p>
+        </div>
+        <button id="download-button" type="button">Download</button>
+    </div>
+    <script src="/static/UAS.js"></script>
+</body>
+</html>
